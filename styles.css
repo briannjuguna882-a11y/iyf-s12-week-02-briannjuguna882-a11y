@@ -132,4 +132,460 @@ button {
 button:hover {
     background-color: var(--color-primary-dark);
 }
+/* Task 4.1: Flexbox Card Row */
 
+.card-section {
+    padding: 30px;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1 1 250px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+.card h3 {
+    margin-top: 0;
+}
+/* Task 4.1: Flexbox Footer */
+
+.footer {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-column {
+    flex: 1 1 200px;
+}
+
+.footer-column a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    margin-top: 25px;
+}
+
+.gallery-section {
+    padding: 30px;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Make the gallery responsive */
+@media (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Task 4.2: Magazine Layout using CSS Grid */
+
+.magazine-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "footer footer";
+    gap: 20px;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+.magazine-header {
+    grid-area: header;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.magazine-sidebar {
+    grid-area: sidebar;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.magazine-content {
+    grid-area: content;
+    background-color: #e8f4f8;
+    padding: 20px;
+}
+
+.magazine-footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* Make the magazine layout responsive */
+@media (max-width: 600px) {
+    .magazine-layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "content"
+            "footer";
+    }
+}
+
+/* Task 4.2: Exercise 3 - Project Cards Grid */
+
+.projects-grid-section {
+    padding: 30px;
+}
+
+.projects-grid-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.project-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.project-card p {
+    line-height: 1.6;
+}
+
+/* Make the project cards responsive */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Task 3.4: Apply the color scheme */
+
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+h1, h2, h3 {
+    color: var(--color-primary-dark);
+}
+
+a {
+    color: var(--color-primary);
+}
+
+a:hover {
+    color: var(--color-primary-dark);
+}
+
+button, .button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover, .button:hover {
+    background-color: var(--color-primary-dark);
+}
+
+/* Task 4.3: Mobile-First Responsive Design */
+
+/* Mobile navigation - base styles */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        flex-direction: row;
+        gap: 20px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .navbar {
+        padding: 20px 40px;
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1280px) {
+    .navbar {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Task 4.3: Responsive Home Page */
+
+/* Mobile-first: single column */
+.home-hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 20px;
+}
+
+.home-hero img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.home-hero-text {
+    width: 100%;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .home-hero {
+        padding: 40px;
+    }
+}
+
+/* Desktop: text and image side by side */
+@media (min-width: 1024px) {
+    .home-hero {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .home-hero-text {
+        flex: 1;
+    }
+
+    .home-hero img {
+        width: 40%;
+        max-width: 450px;
+    }
+}
+
+/* Task 4.3: Mobile-first project grid */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Task 4.3: Responsive Contact Page */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+    padding: 20px;
+}
+
+.contact-form {
+    width: 100%;
+    min-width: 0;
+}
+
+.contact-form fieldset {
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.contact-form label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+.contact-form input:not([type="checkbox"]),
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-form .newsletter-option {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 15px 0;
+}
+
+.contact-form .newsletter-option label {
+    margin: 0;
+}
+
+.contact-sidebar {
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+    .contact-layout {
+        grid-template-columns: 2fr 1fr;
+        max-width: 1200px;
+        margin: 0 auto;
+        align-items: start;
+    }
+}
+
+/* Task 4.4: Polish and Final Styling */
+
+/* Smooth transitions for buttons and links */
+button,
+a {
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+/* Navigation link hover effect */
+nav a:hover {
+    color: var(--color-primary);
+}
+
+/* Project card hover effect */
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Visible keyboard focus */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-primary);
+    outline-offset: 3px;
+}
