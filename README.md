@@ -31,3 +31,5 @@ I am learning to use CSS to style web pages, create consistent typography and co
 
 ## Live Demo
 To be added after deployment to GitHub Pages.
+
+[View my live portfolio](https://briannjuguna882-a11y.github.io/iyf-s12-week-02-briannjuguna882-a11y/)
